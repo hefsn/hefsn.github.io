@@ -1,0 +1,266 @@
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --text-color: #1f2937;
+  --light-text: #6b7280;
+  --background: #ffffff;
+  --section-bg: #f3f4f6;
+  --border-color: #e5e7eb;
+}
+
+.test-banner {
+  background-color: #e74c3c;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  margin: -2rem -2rem 2rem -2rem;
+  font-weight: bold;
+  border-radius: 12px 12px 0 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+.cv-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--background);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.cv-header {
+  margin-bottom: 2rem;
+}
+
+.profile-section {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--section-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h1 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.title {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--light-text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-item:hover {
+  color: var(--primary-color);
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.cv-section {
+  background-color: var(--section-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.cv-section h2 {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.about-text {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--primary-color);
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transform: translateX(-5px);
+}
+
+.timeline-date {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.company {
+  color: var(--light-text);
+  margin: 0.2rem 0;
+}
+
+.timeline-content ul {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.5rem;
+}
+
+.timeline-content li {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-category h3 {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.skill-tag:hover {
+  background-color: var(--secondary-color);
+}
+
+.education-item h3 {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.institution {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin: 0.2rem 0;
+}
+
+.date {
+  color: var(--light-text);
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+}
+
+@media (max-width: 768px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-info {
+    justify-content: center;
+  }
+
+  .timeline-item {
+    padding-left: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .test-banner {
+    margin: -1rem -1rem 1rem -1rem;
+  }
+
+  .profile-info h1 {
+    font-size: 2rem;
+  }
+
+  .skill-tags {
+    justify-content: center;
+  }
+} 
